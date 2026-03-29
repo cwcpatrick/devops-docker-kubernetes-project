@@ -1,32 +1,17 @@
-cat > README.md << 'EOF'
-# 🌐 Multi-Cloud DevOps Platform
+# 🚀 DevOps Project: Docker + Kubernetes
 
-A full end‑to‑end DevOps project deploying a microservices application across:
-
+## 🔧 Tech Stack
 - Docker
-- Kubernetes (kind, EKS, AKS, GKE, OpenShift)
-- Terraform (AWS, Azure, GCP)
-- GitHub Actions CI/CD
-- Prometheus + Grafana monitoring
+- Kubernetes (Minikube)
+- Nginx
 
-This project demonstrates real-world DevOps engineering across multi-cloud environments.
+## 📌 What I Did
+- Containerized a web app using Docker
+- Deployed it locally using Kubernetes
+- Exposed the service via NodePort
 
-## 📁 Project Structure
-
-- **app/** – Microservices (API, frontend, worker)
-- **docker/** – Dockerfiles
-- **kubernetes/** – Manifests + overlays for each cloud
-- **terraform/** – IaC for AWS, Azure, GCP
-- **ci-cd/** – GitHub Actions pipelines
-- **monitoring/** – Prometheus + Grafana
-- **docs/** – Architecture diagrams + runbooks
-
-## 🚀 Goals
-
-- Build a production-grade DevOps platform
-- Deploy microservices across multiple clouds
-- Automate everything with CI/CD
-- Implement monitoring and observability
-- Showcase enterprise DevOps skills
-
-EOF
+## 🖥️ Commands Used
+```bash
+docker build -t myapp .
+kubectl create deployment myapp --image=myapp
+kubectl expose deployment myapp --type=NodePort --port=80
